@@ -6,6 +6,6 @@ using namespace std;
 int main()
 {
     cout << "Hello World!" << endl;
-    cout << "Now Git-Pilled" << endl;
+    cout << "Now Git-Pilled!" << endl;
     return 0;
 }
