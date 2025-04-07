@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f44ca1bf-dad7-49bb-a4cb-a79b11e6ed45}</ProjectGuid>
-    <RootNamespace>UserDataTypes</RootNamespace>
+    <ProjectGuid>{0ab17395-02b1-43a8-9990-da1f88dbd347}</ProjectGuid>
+    <RootNamespace>UserDataTypesImage</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="UserDataTypes.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Employee.h" />
+    <ClCompile Include="UserDataTypesImage.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
