@@ -3,7 +3,7 @@
 // Define TAX_RATE as 10%
 const float Employee::TAX_RATE = 0.1f;
 
-void Employee::Read()
+void Employee::Read() // Gets employee info from user input
 {
 	std::cout << "Enter Name: " << std::endl;
 	std::cin >> name;
@@ -21,7 +21,7 @@ void Employee::Read()
 	std::cin >> hoursWorked;
 }
 
-void Employee::Write()
+void Employee::Write() // Prints employee information
 {
 	float weeklyGrossIncome = hourlyWage * hoursWorked;
 	float weeklyIncomeTax = weeklyGrossIncome * TAX_RATE;
@@ -30,8 +30,8 @@ void Employee::Write()
 	float yearlyNetIncome = yearlyGrossIncome - (yearlyGrossIncome * TAX_RATE);
 
 	std::cout << "Employee Payroll Summary" << std::endl;
-	std::cout << std::string('-', 30) << std::endl;  // Googled how to repeat a character in C++ <3 Stack Overflow
-	std::cout << "Name: " << name << std::endl;
+	std::cout << std::string('-', 30) << std::endl;  // Googled how to repeat a character in C++; <3 Stack Overflow
+	std::cout << "Employee name: " << name << std::endl;
 	std::cout << "Age: " << age << std::endl;
 	std::cout << "Zip Code: " << zipCode << std::endl;
 	std::cout << "Hourly Wage: $" << hourlyWage << std::endl;
