@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <algorithm>
 #include <ctime>
 #include "GuessingGame.h"
 
@@ -13,19 +14,19 @@ int GuessingGame::generateRandomNumber(int upperBound) // Creates a random numbe
 
 void GuessingGame::selectDifficuly(std::string gameDifficultyLevel) // Handles logic and generates value based on user's difficulty selection.
 {
-	if (gameDifficultyLevel == "1" || gameDifficultyLevel == "easy" || gameDifficultyLevel == "Easy")
+	if (gameDifficultyLevel == "1" || gameDifficultyLevel == "easy")
 	{
 		randomNumber = generateRandomNumber(5);
 		std::cout << "Guess a number between 1 and 5" << std::endl;
 		isValid = true;
 	}
-	else if (gameDifficultyLevel == "2" || gameDifficultyLevel == "medium" || gameDifficultyLevel == "Medium")
+	else if (gameDifficultyLevel == "2" || gameDifficultyLevel == "medium")
 	{
 		randomNumber = generateRandomNumber(10);
 		std::cout << "Guess a number between 1 and 10" << std::endl;
 		isValid = true;
 	}
-	else if (gameDifficultyLevel == "3" || gameDifficultyLevel == "hard" || gameDifficultyLevel == "Hard")
+	else if (gameDifficultyLevel == "3" || gameDifficultyLevel == "hard")
 	{
 		randomNumber = generateRandomNumber(20);
 		std::cout << "Guess a number between 1 and 20" << std::endl;
@@ -34,7 +35,7 @@ void GuessingGame::selectDifficuly(std::string gameDifficultyLevel) // Handles l
 	else
 	{
 		std::cout << "Please enter a valid option." << std::endl;
-		isValid = true;
+		isValid = false;
 	}
 	
 }
@@ -47,13 +48,9 @@ void GuessingGame::checkGuess()
 		playerWon = true;
 		exit(0); // Brained this, not that that's super impressive
 	}
-	else if (playerGuess > randomNumber)
-	{
-		std::cout << "That's to high! Try again." << std::endl;
-	}
-	else {
-		std::cout << "That's to low! Try again." << std::endl;
-	}
+	else if (playerGuess > randomNumber) std::cout << "That's too high! Try again." << std::endl;
+
+	else std::cout << "That's too low! Try again." << std::endl;
 }
 
 void GuessingGame::play() 
@@ -73,8 +70,5 @@ void GuessingGame::play()
 		checkGuess();
 	}
 
-	if (!playerWon)
-	{
-		std::cout << "You lose!" << std::endl;
-	}
+	if (!playerWon) std::cout << "You lose!" << std::endl;
 }
