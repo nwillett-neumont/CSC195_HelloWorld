@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessingGame", "Numbe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryDemo", "MemoryDemo\MemoryDemo.vcxproj", "{524E2C0C-F23F-433A-8DA3-ED8A7F81B43F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryReview", "MemoryReview\MemoryReview.vcxproj", "{37625D21-0EE0-419F-B25C-7E9054726A89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{524E2C0C-F23F-433A-8DA3-ED8A7F81B43F}.Release|x64.Build.0 = Release|x64
 		{524E2C0C-F23F-433A-8DA3-ED8A7F81B43F}.Release|x86.ActiveCfg = Release|Win32
 		{524E2C0C-F23F-433A-8DA3-ED8A7F81B43F}.Release|x86.Build.0 = Release|Win32
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Debug|x64.ActiveCfg = Debug|x64
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Debug|x64.Build.0 = Debug|x64
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Debug|x86.ActiveCfg = Debug|Win32
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Debug|x86.Build.0 = Debug|Win32
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Release|x64.ActiveCfg = Release|x64
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Release|x64.Build.0 = Release|x64
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Release|x86.ActiveCfg = Release|Win32
+		{37625D21-0EE0-419F-B25C-7E9054726A89}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
