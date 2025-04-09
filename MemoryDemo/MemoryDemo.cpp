@@ -37,4 +37,12 @@ int main()
     int* p = &i1;
 
     std::cout << i1 << std::endl << i2 << std::endl << p << std::endl << &p << std::endl;
+
+    std::cout << std::string(40, '-') << std::endl;
+
+    int number1 = 1;
+    int* pNumber1 = new int(1);
+    int* pNumbers1 = new int[5] {1,1,2,2,3};
+
+    std::cout << pNumbers1[4] << std::endl;
 }
