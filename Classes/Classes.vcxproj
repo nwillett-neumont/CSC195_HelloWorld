@@ -136,7 +136,6 @@
   <ItemGroup>
     <ClInclude Include="Database.h" />
     <ClInclude Include="Flint.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Rock.h" />
     <ClInclude Include="Size.h" />
     <ClInclude Include="Steel.h" />

@@ -1,6 +1,6 @@
 #include "Rock.h"
 
-void Rock::read(std::ostream& ostream, std::istream& istream)
+void Rock::read(std::ostream& ostream, std::istream& istream) // Asks the user for various inputs and assigns them to a Rock object
 {
 	ostream << "What is this rock's common name? ";
 	std::string input;
@@ -25,7 +25,7 @@ void Rock::read(std::ostream& ostream, std::istream& istream)
 	setSize(static_cast<Size>(t));
 }
 
-void Rock::write(std::ostream& ostream)
+void Rock::write(std::ostream& ostream) // Prints out all base rock information nice and clean like
 {
 	std::cout << "Common Name: " << getCommonName() << "\n"
 		<< "Composition: " << getComposition() << "\n"

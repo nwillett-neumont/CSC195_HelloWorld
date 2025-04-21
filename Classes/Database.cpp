@@ -1,6 +1,6 @@
 #include "Database.h"
 
-Database::~Database()
+Database::~Database() // Destructor
 {
 	for (Rock* rock : rocks)
 	{
@@ -8,7 +8,7 @@ Database::~Database()
 	}
 }
 
-void Database::create(Rock::eType type)
+void Database::create(Rock::eType type) // Creates a new rock based on type
 {
 	Rock* rock = nullptr;
 	switch (type)
@@ -24,7 +24,7 @@ void Database::create(Rock::eType type)
 	rocks.push_back(rock);
 }
 
-void Database::display(const std::string commonName)
+void Database::display(const std::string commonName) // Prints out rocks only with matching names
 {
 	for (Rock* rock : rocks)
 	{
@@ -36,7 +36,7 @@ void Database::display(const std::string commonName)
 	}
 }
 
-void Database::display(Rock::eType type)
+void Database::display(Rock::eType type) // Prints out rocks only with matching types
 {
 	for (Rock* rock : rocks)
 	{
@@ -48,7 +48,7 @@ void Database::display(Rock::eType type)
 	}
 }
 
-void Database::displayAll()
+void Database::displayAll() // Prints out all rocks, indiscriminately
 {
 	for (Rock* rock : rocks)
 	{

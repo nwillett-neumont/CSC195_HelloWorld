@@ -1,6 +1,6 @@
 #include "Flint.h"
 
-void Flint::read(std::ostream& ostream, std::istream& istream)
+void Flint::read(std::ostream& ostream, std::istream& istream) // Asks the user whether or not isShiny should be true or not and assigns it based on their input
 {
 	Rock::read(ostream, istream);
 	ostream << "Is this particular piece of flint shiny? (y/n)";
@@ -18,7 +18,7 @@ void Flint::read(std::ostream& ostream, std::istream& istream)
 	}
 }
 
-void Flint::write(std::ostream& ostream)
+void Flint::write(std::ostream& ostream) // Outputs the shine status
 {
 	Rock::write(ostream);
 	ostream << "Shine status: " << getIsShiny() << std::endl;

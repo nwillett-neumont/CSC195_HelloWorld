@@ -1,6 +1,5 @@
 #pragma once
-#include <array>
-
+// Enum for the different sizes of rock
 enum Size
 {
 	SMALL,

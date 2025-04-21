@@ -3,17 +3,21 @@
 
 int main()
 {   
+    // Creating the necessary objects and values
     Database database;
-
     bool quit = false;
     std::string name;
-    std::cout << std::string(40, 45) << "\n";
+
+    std::cout << std::string(40, 45) << "\n"; // Partitions for cute organization
+
     while (!quit)
-    {
+    {   
+        // Prints out the menu, a partition and awaits user input
         std::cout << "Please select an option: \n\t1 - Create\n\t2 - Display All\n\t3 - Display by Name\n\t4 - Display by Type\n\t5 - Quit\n";
         std::cout << std::string(40, 45) << "\n";
         int choice;
         std::cin >> choice;
+        // Based on user input, do one of the following options, (or break horribly)
         switch (choice)
         {
         case 1: 
@@ -40,6 +44,9 @@ int main()
         case 5:
             quit = true;
             break;
+        default:
+            std::cout << "THAT'S NOT AN ACCEPTABLE VALUE.";
+            exit(0);
         }
     }
 }
