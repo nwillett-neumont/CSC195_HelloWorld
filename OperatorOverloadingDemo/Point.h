@@ -20,7 +20,7 @@ namespace point
 
 		void operator * (float sigma);
 
-		friend std::ostream& operator << (std::ostream& ostream, point::Point point);
+		friend std::ostream& operator<< (std::ostream& ostream, point::Point point);
 	};
 }
 

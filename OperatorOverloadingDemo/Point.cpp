@@ -19,7 +19,8 @@ namespace point
 	{
 		x *= sigma; y *= sigma;
 	}
-	void operator << (std::ostream& ostream, point::Point point)
+	
+	std::ostream& operator<<(std::ostream& ostream, point::Point point)
 	{
 		ostream << "(" << point.x << ", " << point.y << ")\n";
 	}
