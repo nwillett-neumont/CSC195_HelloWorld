@@ -37,53 +37,53 @@ double mathlib::Fraction<>::toDouble() const // Divides the numerator by the den
 
 // Definitions for class operator overloads
 // Arithmetic operators
-mathlib::Fraction<> mathlib::Fraction<>::operator+(Fraction<>& fraction) // Basically cross multiplies the numerator and denominators, so that they can be added, and adds them
+mathlib::Fraction<> mathlib::Fraction<>::operator+(Fraction<>& fraction) const// Basically cross multiplies the numerator and denominators, so that they can be added, and adds them
 {
 	return Fraction((this->getNumerator() * fraction.getDenominator()) + (fraction.getNumerator() * this->getDenominator()), this->getDenominator()* fraction.getDenominator());
 }
 
-mathlib::Fraction<> mathlib::Fraction<>::operator-(Fraction<>& fraction) // Basically cross multiplies the numerator and denominators, so that they can be subtracted, and subtracts them
+mathlib::Fraction<> mathlib::Fraction<>::operator-(Fraction<>& fraction) const // Basically cross multiplies the numerator and denominators, so that they can be subtracted, and subtracts them
 {
 	return Fraction<>((this->getNumerator() * fraction.getDenominator()) - (fraction.getNumerator() * this->getDenominator()), this->getDenominator() * fraction.getDenominator());
 }
 
-mathlib::Fraction<> mathlib::Fraction<>::operator*(Fraction<>& fraction) // Multiplies straight accross
+mathlib::Fraction<> mathlib::Fraction<>::operator*(Fraction<>& fraction) const // Multiplies straight accross
 {
 	return Fraction(this->getNumerator() * fraction.getNumerator(), this->getDenominator() * fraction.getDenominator());
 }
 
-mathlib::Fraction<> mathlib::Fraction<>::operator/(Fraction<>& fraction) // Multiplies a fraction by the reciprocal of the other fraction
+mathlib::Fraction<> mathlib::Fraction<>::operator/(Fraction<>& fraction) const // Multiplies a fraction by the reciprocal of the other fraction
 {
 	return Fraction<>(this->getNumerator() * fraction.getDenominator(), this->getDenominator() * fraction.getNumerator());
 }
 
 // Comparison operators
-bool mathlib::Fraction<>::operator==(Fraction<>& fraction) // Ternary operator that returns whether or not the fractions are equal
+bool mathlib::Fraction<>::operator==(Fraction<>& fraction) const // Ternary operator that returns whether or not the fractions are equal
 {
 	return (this->toDouble() == fraction.toDouble()) ? true : false;
 }
 
-bool mathlib::Fraction<>::operator!=(Fraction<>& fraction) // Ternary operator that returns whether or not the fractions are not equal
+bool mathlib::Fraction<>::operator!=(Fraction<>& fraction) const // Ternary operator that returns whether or not the fractions are not equal
 {
 	return (this->toDouble() != fraction.toDouble()) ? true : false;
 }
 
-bool mathlib::Fraction<>::operator<(Fraction<>& fraction) // Ternary operator that returns whether or not a fraction is less than another fraction
+bool mathlib::Fraction<>::operator<(Fraction<>& fraction) const // Ternary operator that returns whether or not a fraction is less than another fraction
 {
 	return (this->toDouble() < fraction.toDouble()) ? true : false;
 }
 
-bool mathlib::Fraction<>::operator<=(Fraction<>& fraction) // Ternary operator that returns whether or not a fraction is less than or equal to another fraction
+bool mathlib::Fraction<>::operator<=(Fraction<>& fraction) const // Ternary operator that returns whether or not a fraction is less than or equal to another fraction
 {
 	return (this->toDouble() <= fraction.toDouble()) ? true : false;
 }
 
-bool mathlib::Fraction<>::operator>(Fraction<>& fraction) // Ternary operator that returns whether or not a fraction is greater than another fraction
+bool mathlib::Fraction<>::operator>(Fraction<>& fraction) const // Ternary operator that returns whether or not a fraction is greater than another fraction
 {
 	return (this->toDouble() > fraction.toDouble()) ? true : false;
 }
 
-bool mathlib::Fraction<>::operator>=(Fraction<>& fraction)  // Ternary operator that returns whether or not a fraction is greater than or equal to another fraction
+bool mathlib::Fraction<>::operator>=(Fraction<>& fraction) const // Ternary operator that returns whether or not a fraction is greater than or equal to another fraction
 {
 	return (this->toDouble() >= fraction.toDouble()) ? true : false;
 }

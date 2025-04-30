@@ -22,7 +22,7 @@ namespace point
 	
 	std::ostream& operator<<(std::ostream& ostream, point::Point point)
 	{
-		ostream << "(" << point.x << ", " << point.y << ")\n";
+		return ostream << "(" << point.x << ", " << point.y << ")\n";
 	}
 }
 

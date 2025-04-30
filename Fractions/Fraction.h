@@ -31,26 +31,26 @@ namespace mathlib {
 
 		// Fraction operator overloads
 		// Arithmetic operators
-		Fraction<> operator+(Fraction<>& fraction);
+		Fraction<> operator+(Fraction<>& fraction) const;
 
-		Fraction<> operator-(Fraction<>& fraction);
+		Fraction<> operator-(Fraction<>& fraction) const;
 
-		Fraction<> operator*(Fraction& fraction);
+		Fraction<> operator*(Fraction& fraction) const;
 
-		Fraction<> operator/(Fraction<>& fraction);
+		Fraction<> operator/(Fraction<>& fraction) const;
 
 		// Comparison operators
-		bool operator==(Fraction<>& fraction);
+		bool operator==(Fraction<>& fraction) const;
 
-		bool operator!=(Fraction<>& fraction);
+		bool operator!=(Fraction<>& fraction) const;
 
-		bool operator<(Fraction<>& fraction);
+		bool operator<(Fraction<>& fraction) const;
 
-		bool operator<=(Fraction<>& fraction);
+		bool operator<=(Fraction<>& fraction) const;
 
-		bool operator>(Fraction<>& fraction);
+		bool operator>(Fraction<>& fraction) const;
 
-		bool operator>=(Fraction<>& fraction);
+		bool operator>=(Fraction<>& fraction) const;
 		
 		// Streaming operators
 		friend std::ostream& operator<<(std::ostream& ostream, Fraction<> fraction);
@@ -72,10 +72,10 @@ namespace mathlib {
 		{
 			this->numerator = numerator;
 		}
-
+		
 		void setDenominator(T denominator)
 		{	
-			if (denominator <= 0 )
+			if (denominator == 0 )
 			{
 				this->denominator = 1;
 			}
