@@ -16,7 +16,7 @@ static void run()
     {
         // Prints out the menu, a partition and awaits user input
         std::cout << "Please select an option: \n\t1 - Create\n\t2 - Display All\n\t3 - Display by Name\n\t4 - Display by Type\n\t5 - Load data\n\t6 - Save data\n\t7 - Quit\n";
-        std::cout << std::string(40, 45) << "\n";
+        std::cout << std::string(40, 45) << "\n" << ": ";
         int choice;
         std::cin >> choice;
         // Based on user input, do one of the following options, (or break horribly)
